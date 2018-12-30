@@ -1,24 +1,24 @@
+{{ define "main" }}
+
 {{ partial "head" . }}
 
-{{if ne .Site.Params.singleViewStyle "casper"}}<body class="ctsingle">
-{{else}}<body class="page-template">{{end}}
-<div class="site-wrapper"> 
+<body class="ctsingle">
 
-{{if ne .Site.Params.singleViewStyle "casper"}}{{ partial "header" . }}
-{{else}}{{ partial "header-sori" . }}{{end}}
+<div class="site-wrapper">
 
+    {{ partial "header-sori" . }}
 
-<main id="site-main" class="site-main outer" role="main">
-  <div class="inner">
-  	{{if ne .Site.Params.singleViewStyle "casper"}}
-    <div class="post-feed">
-      {{ partial "page-single" . }}
-    </div>
-    {{else}}
-      {{ partial "page-single-sori" . }}
-    {{end}}
-  </div>
-</main>
+    <main id="site-main" class="site-main outer" role="main">
+        <div class="inner">
 
-{{ partial "footer" . }}
-</div>{{ partial "js" . }}</body></html>
+            {{ partial "page-single-sori" . }}
+
+        </div>
+    </main>
+
+    {{ partial "footer" . }}
+</div>
+{{ partial "js" . }}
+</body>
+
+{{ end }}
