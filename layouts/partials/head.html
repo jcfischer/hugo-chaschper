@@ -19,7 +19,12 @@
 
     {{ .Hugo.Generator }}
 
+    {{ "<!-- IndieWeb -->" | safeHTML }}
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+    {{ with .Site.Params.indieWeb.webmention }}
+        <link rel="webmention" href="https://webmention.io/{{ . }}/webmention" />
+        <link rel="pingback" href="https://webmention.io/{{ . }}/xmlrpc" />
+    {{ end }}
 
     {{ "<!-- Stylesheets -->" | safeHTML }}
     <link rel="stylesheet" type="text/css" href="{{ "built/screen.css" | absURL}}" />
