@@ -12,13 +12,13 @@
     </a>
     {{end}}
 
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="{{ .Permalink }}">
+    <div class="post-card-content h-entry">
+      <a class="post-card-content-link u-url" href="{{ .Permalink }}">
           <header class="post-card-header">
               {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
               #{{$tag}} {{end}} </span>
               {{ end }}
-              <h2 class="post-card-title">{{.Title}}</h2>
+              <h2 class="post-card-title p-name">{{.Title}}</h2>
           </header>
           <section class="post-card-excerpt">
               {{ if .Description }}
