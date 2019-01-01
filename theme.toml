@@ -1,17 +1,17 @@
-name = "Casper Two"
+name = "Chaschper"
 license = "MIT"
-licenselink = "https://github.com/eueung/hugo-casper-two/blob/master/LICENSE.md"
-description = "Port of Casper 2.x from Ghost Foundation"
-homepage = "https://github.com/eueung/hugo-casper-two"
-tags = ["blog","pages","ghost theme"]
-features = ["disqus", "google analytics"]
+licenselink = "https://github.com/jcfischer/hugo-chaschper/blob/master/LICENSE.md"
+description = "Based on Casper 2, simplified, IndieWeb"
+homepage = "https://github.com/jcfischer/hugo-chaschper"
+tags = ["blog","pages","ghost theme", "indieweb"]
+features = ["disqus", "google analytics", "maotom"]
 min_version=0.31
 
 [author]
-  name = "Eueung Mulyana"
-  homepage = "https://www.telematika.org/"
+  name = "Jens-Christian Fischer"
+  homepage = "https:/invisible.ch"
 
 [original]
-  name = "Casper"
-  homepage = "https://github.com/TryGhost/Casper"
-  repo = "https://github.com/TryGhost/Casper"
+  name = "Casper-Two"
+  homepage = "https://github.com/eueung/hugo-casper-two"
+  repo = "https://github.com/eueung/hugo-casper-two"
