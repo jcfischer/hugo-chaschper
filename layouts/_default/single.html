@@ -19,10 +19,10 @@
             <div class="read-next-feed">
                 {{ partial "readnext-random-sori" . }}
                 {{with .NextInSection}}
-                {{ partial "readnext-article-sori" . }}
+                {{ partial "article-card" . }}
                 {{end}}
                 {{with .PrevInSection}}
-                {{ partial "readnext-article-sori" . }}
+                {{ partial "article-card" . }}
                 {{end}}
             </div>
         </div>

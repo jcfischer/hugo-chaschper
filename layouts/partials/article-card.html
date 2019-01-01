@@ -1,0 +1,42 @@
+<article class="post-card post h-entry">
+    {{if .Params.image}}
+    <a class="post-card-image-link" href="{{ .Permalink }}">
+        <div class="post-card-image" style="background-image: url({{.Params.image | absURL}})"></div>
+    </a>
+    {{else}}
+    <a class="post-card-image-link" href="{{ .Permalink }}">
+        <div class="post-card-image"
+             style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)"></div>
+    </a>
+    {{end}}
+
+    <div class="post-card-content">
+        <a class="post-card-content-link u-url" href="{{ .Permalink }}">
+            <header class="post-card-header">
+
+                <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
+                {{if .Params.tags }}
+                <span class="date-divider">/</span>
+                {{ range $index, $tag := .Params.tags }}
+                {{if lt $index 2}}
+                #{{$tag}}&nbsp;
+                {{end}}
+                {{end}}
+                {{ end }}
+                <h2 class="post-card-title p-name">{{.Title}}</h2>
+
+            </header>
+            <section class="post-card-excerpt">
+                {{ if .Description }}
+                <p>{{ .Description | markdownify }}</p>
+                {{else}}
+                <p>{{ .Summary | plainify | safeHTML }}{{ if .Truncated }} ... {{end}} </p>
+                {{end}}
+            </section>
+        </a>
+
+        <footer class="post-card-meta">
+            <span class="post-card-author p-author">{{.Params.author | default .Site.Params.author}}</span>
+        </footer>
+    </div>
+</article>

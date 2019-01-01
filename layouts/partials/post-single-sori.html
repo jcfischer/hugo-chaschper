@@ -1,16 +1,33 @@
+{{ $section := .Site.GetPage "section" .Section }}
 <article class="post-full post h-entry">
     <header class="post-full-header">
         <section class="post-full-meta">
-            <a class="u-url" href="{{ .Permalink }}">
-                <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
-            </a>
-            {{if .Params.tags }}
+            <div>
+                <a class="u-url" href="{{ .Permalink }}">
+                    <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
+                </a>
+                {{if .Params.tags }}
                 <span class="date-divider">/</span>
                 {{ range $index, $tag := .Params.tags }}
-                    {{if lt $index 2}}
-                        <a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
-                    {{end}}
+                {{if lt $index 2}}
+                <a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
                 {{end}}
+                {{end}}
+                {{ end }}
+            </div>
+
+            {{/*
+            Show "reading time" and "word count" but only if one of the following are true:
+            1) A global config `params` value is set `show_reading_time = true`
+            2) A section front matter value is set `show_reading_time = true`
+            3) A page front matter value is set `show_reading_time = true`
+            */}}
+            {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
+            <div>
+                <span> - {{ .ReadingTime}} minutes read</span>
+                <span> - {{ .WordCount}} words</span>
+            </div>
+
             {{ end }}
         </section>
         <h1 class="post-full-title p-name">{{.Title}}</h1>
@@ -36,10 +53,6 @@
 
     <footer class="post-full-footer">
         <section class="author-card">
-            {{ if .Site.Author.avatar }}
-            <img class="author-profile-image"
-                 src="{{ (.Params.authorAvatar | default .Site.Author.avatar) | absURL}}" alt="Author"/>
-            {{ end }}
             <section class="author-card-content">
                 <span class="author-card-name p-author">{{.Params.author | default .Site.Author.name}}</span>
                 <p>{{.Params.authorDescription | default .Site.Author.description}}</p>
