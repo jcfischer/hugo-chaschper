@@ -47,15 +47,15 @@
 @media (min-width: 900px) {
     .ctsingle .post-feed {
         margin-top: -70px;
-        padding-top: 0;    
-    } 
+        padding-top: 0;
+    }
     .ctsingle .site-nav {
         position: relative;
         top: -70px;
-    }    
+    }
 }
 
-@media (min-width: 795px) {  
+@media (min-width: 795px) {
     .ctsingle .post-feed p {
         font-size: 1.8rem;
         line-height: 1.55em;
@@ -65,7 +65,7 @@
 @media (max-width: 650px) {
     .hide {
         display: none !important;
-    }   
+    }
     .copyright {
         text-align: center;
     }
@@ -73,4 +73,17 @@
 
 .post-full-content pre code {
     color: #e5eff5;
-}    
+}
+
+.post-mentions {
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 1px solid #AEADAD;
+    border-bottom: 1px solid #AEADAD;
+    font-size: 16px;
+}
+.post-mentions ul {
+    list-style:none;
+    padding:0;
+    margin-left: 0;
+}
