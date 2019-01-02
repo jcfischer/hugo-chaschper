@@ -19,6 +19,9 @@
     {{ with .Site.Params.googleSiteVerification }}
     <meta name="google-site-verification" content="{{ . }}" />
     {{ end }}
+    {{ with .Site.Params.yandexSiteVerification }}
+    <meta name="yandex-verification" content="{{ . }}" />
+    {{ end }}
 
     {{ .Hugo.Generator }}
 
