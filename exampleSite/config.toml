@@ -39,6 +39,8 @@ canonifyurls    = true
 
   pageNotFoundTitle = "404 - Page not found"
 
+  googleSiteVerification = "xyzGoogleVerificationCode"
+
 
 [permalinks]
   posts = "/:year/:month/:slug/"

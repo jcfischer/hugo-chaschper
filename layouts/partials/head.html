@@ -16,7 +16,10 @@
 
     {{ partial "meta-twitter" . }}
     {{ partial "meta-facebook" . }}
-
+    {{ with .Site.Params.googleSiteVerification }}
+    <meta name="google-site-verification" content="{{ . }}" />
+    {{ end }}
+    
     {{ .Hugo.Generator }}
 
     {{ "<!-- IndieWeb -->" | safeHTML }}
