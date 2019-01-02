@@ -1,0 +1,55 @@
+{{ define "main" }}
+
+<body class="post-template">
+<div class="site-wrapper">
+
+    {{ partial "header-sori" . }}
+
+    <main id="site-main" class="site-main outer" role="main">
+        <div class="inner">
+            {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
+
+            <section class="archive">
+                <h2>{{ .Key }}</h2>
+                {{ range ( .Pages.GroupByDate "01" ) }}
+                <h3>{{ .Key }}</h3>
+                <ul>
+                    {{ range .Pages }}
+                    <li><time>{{ .Date.Format "Jan 2" }}</time>
+
+                        <br><a href="{{ .Permalink }}" class="permalink">{{ .Title }}</a>
+
+                        {{ if isset .Params "categories" }}
+                        <br><span class="post-tags">
+					<span class="prefix">categories:</span> {{ range .Params.categories }}
+						<a href="/categories/{{ . | urlize }}">{{ . }}</a> ·
+					{{ end }}
+				</span>
+                        {{ end }}
+                        {{ if isset .Params "tags" }}
+                        <br><span class="post-tags">
+					<span class="prefix">tags:</span> {{ range .Params.tags }}
+						<a href="/tags/{{ . | urlize }}">{{ . }}</a> ·
+					{{ end }}
+					</span>
+                        {{ end }}
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </section>
+            {{ end }}
+        </div>
+    </main>
+
+
+    {{ partial "header-floating-sori" . }}
+
+    {{ partial "footer" . }}
+</div>
+{{ partial "js" . }}
+{{ partial "js-sori" . }}
+</body>
+
+{{ end }}
+
