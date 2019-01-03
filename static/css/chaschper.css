@@ -87,3 +87,11 @@
     padding:0;
     margin-left: 0;
 }
+
+.post-full-content figcaption  h4 {
+    text-align: center;
+    font-size: 85%;
+    font-weight: lighter;
+    font-style: italic;
+    padding-bottom: 1em;
+}
