@@ -95,3 +95,7 @@
     font-style: italic;
     padding-bottom: 1em;
 }
+
+.reading-time {
+    border: blue 1px solid;
+}
