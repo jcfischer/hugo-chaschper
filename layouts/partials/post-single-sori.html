@@ -9,9 +9,7 @@
                 {{if .Params.tags }}
                 <span class="date-divider">/</span>
                 {{ range $index, $tag := .Params.tags }}
-                {{if lt $index 2}}
                 <a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
-                {{end}}
                 {{end}}
                 {{ end }}
             </div>
