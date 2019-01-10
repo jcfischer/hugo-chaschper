@@ -17,6 +17,7 @@
             </div>
 
             <div class="site-nav-right">
+
                 <div class="social-links">
                     {{ if .Site.Params.fbName }}<a class="social-link social-link-fb"
                                                    href="https://www.facebook.com/{{ .Site.Params.fbName }}"
@@ -63,6 +64,7 @@
                 {{else if .Site.Params.showSubscribe}}
                 <a class="subscribe-button" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{" index.xml" | absURL}}{{end}}">Subscribe</a>
                 {{end}}
+                {{ partial "search" . }}
             </div>
 
         </nav>

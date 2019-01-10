@@ -35,9 +35,12 @@
         {{else if .Site.Params.showSubscribe}}
         <a class="subscribe-button" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{"index.xml" | absURL}}{{end}}">Subscribe</a>
         {{end}}
+          {{ partial "search" . }}
       </div>
 
     </nav>
+
+
 
   </div>
 </header>

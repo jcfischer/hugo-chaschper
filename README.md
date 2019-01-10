@@ -62,6 +62,7 @@ canonifyurls    = true
 
 [params]
   title       = "Invisible"
+  domain      = "invisible.ch"
   subtitle    = "Musings. Music. Code. Art"
   copyright   = "© 2018"
 
@@ -135,6 +136,15 @@ canonifyurls    = true
 ```
 
 Sample content structure is given in the `exampleSite` folder. Have fun!
+
+### Search
+
+This theme has a search function. It uses [DuckDuckGo](https://duckduckgo.com) for a site
+specific search (be sure to set the `domain` in `config.toml`)
+
+To get DuckDuckGo to index your domain, submit it to the [Yandex Webmaster Tools](https://webmaster.yandex.com) -
+after a few days, DuckDuckGo will have picked up the domain and the pages indexed by Yandex.
+
 
 ## License
 

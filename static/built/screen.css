@@ -592,7 +592,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+
 }
 
 .social-links a:last-of-type {
@@ -651,6 +652,10 @@ body {
 .subscribe-button:hover {
     text-decoration: none;
     opacity: 1
+}
+
+.search {
+    margin-left: auto;
 }
 
 .rss-button {

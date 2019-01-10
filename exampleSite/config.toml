@@ -16,6 +16,7 @@ canonifyurls    = true
 
 [params]
   title       = "Invisible"
+  domain      = "invisible.ch"
   subtitle    = "Musings. Music. Code. Art"
   copyright   = "© 2018"
 
