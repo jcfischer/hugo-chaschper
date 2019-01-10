@@ -27,11 +27,7 @@
 
             </header>
             <section class="post-card-excerpt">
-                {{ if .Description }}
-                <p>{{ .Description | markdownify }}</p>
-                {{else}}
                 <p>{{ .Summary | plainify | safeHTML }}{{ if .Truncated }} ... {{end}} </p>
-                {{end}}
             </section>
         </a>
 
