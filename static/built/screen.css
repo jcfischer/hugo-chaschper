@@ -1338,7 +1338,7 @@ body {
     letter-spacing: .2px
 }
 
-.subscribe-form form {
+.subscribe-form form, .search form {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
