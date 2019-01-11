@@ -34,15 +34,16 @@
         <nav class="site-footer-nav">
             <a href="/archive">Archives</a>
             {{with .Site.Params.keybaseName}}<a href="https://keybase.io/{{.}}" target="_blank"
-                                                rel="noopener">Keybase</a>{{end}}
+                                                rel="me">Keybase</a>{{end}}
             {{with .Site.Params.fbName}}<a href="https://www.facebook.com/{{.}}" target="_blank"
-                                           rel="noopener">Facebook</a>{{end}}
+                                           rel="me">Facebook</a>{{end}}
             {{with .Site.Params.twitterName}}<a href="https://twitter.com/{{.}}" target="_blank" rel="me">Twitter</a>{{end}}
             {{with .Site.Params.githubName}}<a href="https://github.com/{{.}}" target="_blank" rel="me">Github</a>{{end}}
+            {{with .Site.Params.flickrName}}<a href="https://flickr.com/people/{{.}}" target="_blank" rel="me">Flickr</a>{{end}}
             {{with .Site.Params.linkedinName}}<a href="https://www.linkedin.com/in/{{.}}" target="_blank"
-                                                 rel="noopener">LinkedIn</a>{{end}}
+                                                 rel="me">LinkedIn</a>{{end}}
             {{with .Site.Params.mediumName}}<a href="https://medium.com/@{{.}}" target="_blank"
-                                               rel="noopener">Medium</a>{{end}}
+                                               rel="me">Medium</a>{{end}}
         </nav>
     </div>
 </footer>
