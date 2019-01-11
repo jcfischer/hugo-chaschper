@@ -99,3 +99,8 @@
 .reading-time {
 
 }
+
+img.avatar {
+    width: 128px;
+    height: auto;
+}

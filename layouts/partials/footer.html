@@ -11,12 +11,17 @@
                 <a class="u-email email metatag" rel="me" href="mailto:{{ .Site.Author.email }}">
                     Email Me
                 </a>
+
             </p>
             <p>
+                <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" alt=""/>
+            </p>
+            <p>
+
                 <span class="p-locality">{{ .Site.Params.IndieWeb.City }}</span>,
                 <span class="p-country-name">{{ .Site.Params.IndieWeb.Country }}</span><br/>
 
-                <img class="u-photo" src="img/headshot.png" alt=""/>
+
             </p>
 
 
