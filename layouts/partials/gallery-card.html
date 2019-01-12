@@ -1,0 +1,38 @@
+{{ $gallery := . }}
+<article class="post-card post h-entry">
+
+    {{ $name := (print .Params.ImagesPath "/") }}
+    {{ $path := .Dir }}
+    {{ $src := (print $path $name) }}
+
+    {{ $folder := (print "content/" $path $name) }}
+
+    {{ $files := readDir $folder }}
+    {{ range first 1 $files }}
+    <a class="post-card-image-link" href="{{ $gallery.Permalink }}">
+        <div class="post-card-image" style="background-image: url({{ (print $src .Name) | absURL}})"></div>
+    </a>
+    {{ end }}
+
+    <div class="post-card-content">
+        <a class="post-card-content-link u-url" href="{{ .Permalink }}">
+            <header class="post-card-header">
+
+                <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
+                {{if .Params.tags }}
+                <span class="date-divider">/</span>
+                {{ range $index, $tag := .Params.tags }}
+                {{if lt $index 2}}
+                #{{$tag}}&nbsp;
+                {{end}}
+                {{end}}
+                {{ end }}
+                <h2 class="post-card-title p-name">{{.Title}}</h2>
+            </header>
+        </a>
+
+        <footer class="post-card-meta">
+            <span class="post-card-author p-author">{{.Params.author | default .Site.Params.author}}</span>
+        </footer>
+    </div>
+</article>

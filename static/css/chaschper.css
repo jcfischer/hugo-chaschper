@@ -104,3 +104,32 @@ img.avatar {
     width: 128px;
     height: auto;
 }
+
+@media screen and (min-width: 600px) {
+    .photo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .photo-cell {
+
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .photo-cell {
+        width: calc(33.3333% - 2rem);
+    }
+}
+
+.responsive-image {
+    max-width: 100%;
+}
+.photo-cell {
+    margin: 1rem;
+}
+
+.photo-cell img {
+    display: block;
+}
