@@ -28,6 +28,17 @@
             </header>
         </a>
 
+        <div class="photo-grid-card">
+            {{- $previews := .Resources.ByType "image" }}
+            {{- range after 2 $previews }}
+            {{- with . }}
+            {{- $image400x := (.Resize "400x") }}
+            <a href="{{ .Permalink }}" >
+                <div class="post-card-image" style="background-image: url({{ $image400x.RelPermalink | absURL}})"></div></a>
+            {{- end }}
+            {{- end }}
+        </div>
+
         <footer class="post-card-meta">
             <span class="post-card-author p-author">{{.Params.author | default .Site.Params.author}}</span>
         </footer>

@@ -124,6 +124,16 @@ img.avatar {
     }
 }
 
+.photo-grid-card {
+    column-count: 2;
+    column-gap: 1px;
+}
+
+.photo-grid-card > .post-card-image {
+    margin-bottom: 1px;
+}
+
+
 .photo-cell:first-child {
     margin-top: 0;
 }
