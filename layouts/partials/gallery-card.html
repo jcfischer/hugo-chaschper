@@ -1,30 +1,29 @@
 {{ $gallery := . }}
 <article class="post-card post h-entry">
 
-    {{ $path := .Dir }}
 
-    {{ $folder := (print "content/" $path ) }}
-
-    {{ $files := readDir $folder }}
-    {{ range first 1 $files }}
+    {{- $previews := .Resources.Match "*.jpg" }}
+    {{- range first 1 $previews }}
+    {{- with . }}
+    {{- $image1200x := (.Resize "1200x") }}
     <a class="post-card-image-link" href="{{ $gallery.Permalink }}">
-        <div class="post-card-image" style="background-image: url({{ (print $path .Name) | absURL}})"></div>
+        <div class="post-card-image" style="background-image: url({{ $image1200x.RelPermalink | absURL}})"></div>
     </a>
-    {{ end }}
-
+    {{- end }}
+    {{- end }}
     <div class="post-card-content">
         <a class="post-card-content-link u-url" href="{{ .Permalink }}">
             <header class="post-card-header">
 
                 <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
-                {{if .Params.tags }}
+                {{- if .Params.tags }}
                 <span class="date-divider">/</span>
-                {{ range $index, $tag := .Params.tags }}
-                {{if lt $index 2}}
+                {{- range $index, $tag := .Params.tags }}
+                {{- if lt $index 2}}
                 #{{$tag}}&nbsp;
-                {{end}}
-                {{end}}
-                {{ end }}
+                {{- end}}
+                {{- end}}
+                {{- end }}
                 <h2 class="post-card-title p-name">{{.Title}}</h2>
             </header>
         </a>
