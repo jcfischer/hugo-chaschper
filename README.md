@@ -142,17 +142,15 @@ Sample content structure is given in the `exampleSite` folder. Have fun!
 This theme has a search function. It uses [DuckDuckGo](https://duckduckgo.com) for a site
 specific search (be sure to set the `domain` in `config.toml`)
 
-To get DuckDuckGo to index your domain, submit it to the [Yandex Webmaster Tools](https://webmaster.yandex.com) -
+To get DuckDuckGo to index your domain, submit it to the 
+[Yandex Webmaster Tools](https://webmaster.yandex.com) -
 after a few days, DuckDuckGo will have picked up the domain and the pages indexed by Yandex.
 
 ## Image Galleries
 
-Create a directory called "galleries" in your `content` directory. Add a directory for each gallery and place the
-(currently only ".jpg") images in it. Add `index.md` (otherwise it will not work) with a description (optional) and
-the following front mater:
-
-In the frontmatter of your markdown file, add a title and the name of your images directory:
-
+Create a directory called "galleries" in your `content` directory. Add a directory for each 
+gallery and place the images in it. Add `index.md` (otherwise it will not work) with a
+description (optional) and the following front matter:
 
     ---
     title: "Scuol 2018-10-25"
@@ -161,7 +159,7 @@ In the frontmatter of your markdown file, add a title and the name of your image
     type: "gallery"
     ---
     
-    A wonderful, sunny day in Scuol in autumn. Pictures taken during a walk down to the Inn river. (iPhone Xs)
+    A wonderful, sunny day in Scuol in autumn. Pictures taken during a walk down to the Inn river.
 
 The galleries will mix in with your regular posts and there is
 a `/galleries` path that lists all of them in reverse chronological order.

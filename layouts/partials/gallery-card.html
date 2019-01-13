@@ -2,7 +2,7 @@
 <article class="post-card post h-entry">
 
 
-    {{- $previews := .Resources.Match "*.jpg" }}
+    {{- $previews := .Resources.ByType "image" }}
     {{- range first 1 $previews }}
     {{- with . }}
     {{- $image1200x := (.Resize "1200x") }}
@@ -15,7 +15,7 @@
         <a class="post-card-content-link u-url" href="{{ .Permalink }}">
             <header class="post-card-header">
 
-                <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
+                <time class="post-full-meta-date dt-published" datetime="{{.Date.Format "2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
                 {{- if .Params.tags }}
                 <span class="date-divider">/</span>
                 {{- range $index, $tag := .Params.tags }}
