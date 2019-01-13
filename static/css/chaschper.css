@@ -105,22 +105,33 @@ img.avatar {
     height: auto;
 }
 
-@media screen and (min-width: 600px) {
-    .photo-grid {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    .photo-cell {
 
-        width: calc(50% - 2rem);
+@media (min-width: 620px) {
+    .photo-grid {
+        column-count: 2;
+        column-gap: 0;
+    }
+
+    section {
+        break-inside: avoid;
     }
 }
 
-@media screen and (min-width: 1000px) {
-    .photo-cell {
-        width: calc(33.3333% - 2rem);
+@media (min-width: 960px) {
+    .photo-grid {
+        column-count: 3;
+        column-gap: 0;
     }
+}
+
+.photo-cell:first-child {
+    margin-top: 0;
+}
+
+.photo-cell {
+    background-color: white;
+    margin-bottom: 1vw;
+    display: block;
 }
 
 .responsive-image {

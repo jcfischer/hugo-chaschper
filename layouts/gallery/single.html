@@ -42,9 +42,10 @@
                 {{- with . }}
                     {{- $image400x := (.Resize "400x") }}
                     {{- $image1200x := (.Resize "1200x") }}
-                    <a href="{{ $image1200x.RelPermalink }}" title="" class="photo-cell">
-                        <img src="{{ $image400x.RelPermalink }}"  alt="{{ .Name }}" title="" />
-                    </a>
+                        <a href="{{ $image1200x.RelPermalink }}" title="" class="photo-cell">
+                            <img src="{{ $image400x.RelPermalink }}"  alt="{{ .Name }}" title="" />
+                        </a>
+
                 {{- end }}
                 {{- end }}
                 </div>
