@@ -1,16 +1,14 @@
 {{ $gallery := . }}
 <article class="post-card post h-entry">
 
-    {{ $name := (print .Params.ImagesPath "/") }}
     {{ $path := .Dir }}
-    {{ $src := (print $path $name) }}
 
-    {{ $folder := (print "content/" $path $name) }}
+    {{ $folder := (print "content/" $path ) }}
 
     {{ $files := readDir $folder }}
     {{ range first 1 $files }}
     <a class="post-card-image-link" href="{{ $gallery.Permalink }}">
-        <div class="post-card-image" style="background-image: url({{ (print $src .Name) | absURL}})"></div>
+        <div class="post-card-image" style="background-image: url({{ (print $path .Name) | absURL}})"></div>
     </a>
     {{ end }}
 

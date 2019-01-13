@@ -14,7 +14,8 @@
                     <section class="post-full-meta">
                         <div>
                             <a class="u-url" href="{{ .Permalink }}">
-                                <time class="post-full-meta-date dt-published" datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
+                                <time class="post-full-meta-date dt-published"
+                                      datetime="{{.Date.Format " 2006-01-02"}}">{{ .Date.Format "2 January 2006" | safeHTML }}</time>
                             </a>
                             {{if .Params.tags }}
                             <span class="date-divider">/</span>
@@ -34,22 +35,19 @@
                     </div>
                 </section>
 
+
                 <div class="photo-grid">
-                    {{ $name := (print .Params.ImagesPath "/") }}
-                    {{ $path := .Dir }}
-                    {{ $src := (print $path $name) }}
+                {{ $resources := .Resources.Match "*.jpg"}}
+                {{ range $resources }}
+                {{ with . }}
+                    {{ $image := . }}
+                    {{ $image400x := (.Resize "400x") }}
 
-                    {{ $folder := (print "content/" $path $name) }}
-
-                    {{ $files := readDir $folder }}
-
-                    {{ range shuffle $files }}
-                    {{ if not .IsDir }}
-                    <a href="{{ $src | absURL }}{{ .Name }}" title="{{ .Name }}" class="photo-cell">
-                        <img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}" title="" />
+                    <a href="{{ $image.RelPermalink }}" title="" class="photo-cell">
+                        <img src="{{ $image400x.RelPermalink }}"  alt="{{ .Name }}" title="" />
                     </a>
-                    {{ end }}
-                    {{ end }}
+                {{ end }}
+                {{ end }}
 
                 </div>
 

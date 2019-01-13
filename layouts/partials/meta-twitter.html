@@ -1,15 +1,13 @@
 {{ if .IsPage }} <!-- Credit V JEANTET -->
 
 {{ if eq .Type "gallery" }}
-    {{ $name := (print .Params.ImagesPath "/") }}
     {{ $path := .Dir }}
-    {{ $src := (print $path $name) }}
 
-    {{ $folder := (print "content/" $path $name) }}
+    {{ $folder := (print "content/" $path ) }}
 
     {{ $files := readDir $folder }}
     {{ range first 1 $files }}
-    <meta name="twitter:image" content="{{ (print $src .Name) | absURL}}"/>
+    <meta name="twitter:image" content="{{ (print $path .Name) | absURL}}"/>
 {{ end }}
 {{ else }}
     {{ with .Params.image }}

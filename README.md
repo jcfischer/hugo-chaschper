@@ -147,22 +147,26 @@ after a few days, DuckDuckGo will have picked up the domain and the pages indexe
 
 ## Image Galleries
 
-Create a directory called "galleries" in your `content` directory. Add a directory and a `md` file for each gallery.
+Create a directory called "galleries" in your `content` directory. Add a directory for each gallery and place the
+(currently only ".jpg") images in it. Add `index.md` (otherwise it will not work) with a description (optional) and
+the following front mater:
 
 In the frontmatter of your markdown file, add a title and the name of your images directory:
+
 
     ---
     title: "Scuol 2018-10-25"
     date: 2018-10-25T15:26:46+01:00
-    imagesPath: "2018-10-25"
     tags: ["scuol", "autumn"]
     type: "gallery"
     ---
     
     A wonderful, sunny day in Scuol in autumn. Pictures taken during a walk down to the Inn river. (iPhone Xs)
 
-and place the images in the named directory. The galleries will mix in with your regular posts and there is
+The galleries will mix in with your regular posts and there is
 a `/galleries` path that lists all of them in reverse chronological order.
+
+Uses [Fluidbox](https://terrymun.github.io/Fluidbox/demo/index.html) to display images.
 
 
 ## License
