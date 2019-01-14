@@ -1,5 +1,7 @@
 # Chaschper
 
+[![Build Status](https://travis-ci.org/jcfischer/hugo-chaschper.svg?branch=master)](https://travis-ci.org/jcfischer/hugo-chaschper)
+
 ## History 
 
 [Chaschper](https://github.com/jcfischer/hugo-chascher) is based on [Casper Two](https://github.com/eueung/hugo-casper-two), a port of the [Casper](https://github.com/TryGhost/Casper), the default personal blogging theme for Ghost. A legacy version (v1.x) has [already been ported](https://github.com/vjeantet/hugo-theme-casper) to Hugo years ago.
