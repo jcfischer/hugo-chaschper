@@ -1,6 +1,6 @@
 baseurl         = "/"
 title           = "Invisible - Musings. Music. Code. Art"
-theme           = [ "chaschper", "matomo" ]
+theme           = [ "hugo-chaschper", "matomo" ]
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
