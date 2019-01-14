@@ -1,15 +1,11 @@
-+++
-comments = false
-date = "2015-04-14T22:17:00+00:00"
-draft = false
-noauthor = true
-share = false
-title = "About me"
-type = "page"
-[menu.main]
-weight = 111
+---
+title: "About"
+date: 2018-12-30T09:42:46+01:00
+author: "Jens-Christian Fischer"
+---
 
-+++
+## Who am I?
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

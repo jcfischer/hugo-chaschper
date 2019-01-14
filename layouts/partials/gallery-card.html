@@ -19,25 +19,26 @@
                 {{- if .Params.tags }}
                 <span class="date-divider">/</span>
                 {{- range $index, $tag := .Params.tags }}
-                {{- if lt $index 2}}
-                #{{$tag}}&nbsp;
-                {{- end}}
+                    {{- if lt $index 2}}
+                    #{{$tag}}&nbsp;
+                    {{- end}}
                 {{- end}}
                 {{- end }}
                 <h2 class="post-card-title p-name">{{.Title}}</h2>
             </header>
         </a>
 
-        <div class="photo-grid-card">
-            {{- $previews := .Resources.ByType "image" }}
-            {{- range after 2 $previews }}
-            {{- with . }}
-            {{- $image400x := (.Resize "400x") }}
-            <a href="{{ .Permalink }}" >
-                <div class="post-card-image" style="background-image: url({{ $image400x.RelPermalink | absURL}})"></div></a>
-            {{- end }}
-            {{- end }}
-        </div>
+        <!-- not yet ready for consumption -->
+        <!--<div class="photo-grid-card">-->
+            <!--{{- $previews := .Resources.ByType "image" }}-->
+            <!--{{- range after 2 $previews }}-->
+                <!--{{- with . }}-->
+                <!--{{- $image400x := (.Resize "400x") }}-->
+                <!--<a href="{{ .Permalink }}" >-->
+                    <!--<div class="post-card-image" style="background-image: url({{ $image400x.RelPermalink | absURL}})"></div></a>-->
+                <!--{{- end }}-->
+            <!--{{- end }}-->
+        <!--</div>-->
 
         <footer class="post-card-meta">
             <span class="post-card-author p-author">{{.Params.author | default .Site.Params.author}}</span>

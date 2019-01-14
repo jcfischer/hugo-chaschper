@@ -1,5 +1,5 @@
 baseurl         = "/"
-title           = "Invisible - Musings. Music. Code. Art"
+title           = "Chaschper - Hugo. HTML. Gallery. Art"
 theme           = [ "hugo-chaschper" ] # add "matomo" if you want matomo tracking
 languageCode    = "en-US"
 disqusShortname = ""
@@ -17,11 +17,11 @@ canonifyurls    = true
 [params]
   title       = "Invisible"
   domain      = "invisible.ch"
-  subtitle    = "Musings. Music. Code. Art"
+  subtitle    = "Hugo. HTML. Gallery. Art"
   copyright   = "© 2018"
 
   cover       = "img/blog-cover.jpg"
-  description = "Portfolio and Blog of Jens-Christian Fischer"
+  description = "Portfolio and Blog for Chaschper"
   metaDescription = ""
   googleAnalytics = ""
   customCSS = []
@@ -83,7 +83,7 @@ canonifyurls    = true
 # [params.matomo]
 #     url = "https://matomo.invisible.ch"
 #     id = 1
-# 
+#
 # [params.matomo.track]
 #     button = "Enable Analytics"
 #     message = "Your visits will be logged."
