@@ -1,4 +1,4 @@
-baseurl         = "/"
+baseurl         = "https://example.com"
 title           = "Chaschper - Hugo. HTML. Gallery. Art"
 theme           = [ "hugo-chaschper" ] # add "matomo" if you want matomo tracking
 languageCode    = "en-US"
@@ -47,6 +47,11 @@ canonifyurls    = true
 [permalinks]
   posts = "/:year/:month/:slug/"
 
+[[memu.main]]
+  name = "Home"
+  url = "/"
+  weight = 999
+
 [[menu.main]]
   name = "Musings"
   url = "/categories/musings"
@@ -63,8 +68,8 @@ canonifyurls    = true
   weight = 99
 
 [[menu.main]]
-  name = "Art"
-  url = "/categories/art"
+  name = "Galleries"
+  url = "/galleries"
   weight = 95
 
 [[menu.main]]
@@ -79,6 +84,9 @@ canonifyurls    = true
     Country = "Switzerland"
     City = "Zurich"
     webmention = "invisible.ch"
+
+# Enable this section for Matomo analytics. You will need to install
+# the "matomo" theme and enable it in the themes setting above
 
 # [params.matomo]
 #     url = "https://matomo.invisible.ch"
