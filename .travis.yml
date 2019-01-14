@@ -9,5 +9,5 @@ install:
 
 script:
   - cd exampleSite
-  - hugo --themesDir .. -t . -v
+  - hugo --themesDir ../.. -t . -v
   - htmlproofer public --check-html --disable-external
