@@ -1,35 +1,13 @@
-language: minimal
-
-matrix:
-  include:
-    - name: "Hugo Min Version"
-      env:
-        - latest=false
-    - name: "Hugo Latest Version"
-      env:
-        - latest=true
-
-
 env:
-  global:
-    - minVer=0.48
-    - HUGO_THEME=hugo-chaschper
+  - HUGO_VERSION="0.53"
 
 install:
-  - rm -rf public || exit 0
-  - mkdir ~/_bin
-  - |
-    if [ $latest ]; then
-      link=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "/hugo_[0-9]\.[0-9]*_Linux-64bit.tar.gz" | cut -d\" -f4)
-    else
-      link="https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz"
-    fi
-  - wget $(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "/hugo_[0-9]\.[0-9]*_Linux-64bit.tar.gz" | cut -d\" -f4) -O hugo.tgz
-  - tar xfv hugo.tgz -C ~/_bin
-  - rm hugo.tgz ~/_bin/*.md
-  - export PATH=$HOME/_bin:$PATH
+  - wget -q https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+  - tar xf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+  - mv hugo ~/bin/
+  - gem install html-proofer
 
 script:
-  - hugo version
   - cd exampleSite
-  - hugo
+  - hugo --themesDir .. -t . -v
+  - htmlproofer public --check-html --disable-external
