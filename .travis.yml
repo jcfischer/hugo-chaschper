@@ -22,6 +22,7 @@ install:
     else
       link="https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz"
     fi
+  - echo $link
   - wget $link -O hugo.tgz
   - tar xfv hugo.tgz -C ~/_bin
   - rm hugo.tgz ~/_bin/*.md
