@@ -1,6 +1,6 @@
 baseurl         = "/"
 title           = "Invisible - Musings. Music. Code. Art"
-theme           = [ "chaschper", "matomo" ]
+theme           = [ "hugo-chaschper" ] # add "matomo" if you want matomo tracking
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
@@ -80,13 +80,13 @@ canonifyurls    = true
     City = "Zurich"
     webmention = "invisible.ch"
 
-[params.matomo]
-    url = "https://matomo.invisible.ch"
-    id = 1
-
-[params.matomo.track]
-    button = "Enable Analytics"
-    message = "Your visits will be logged."
-[params.matomo.block]
-    button = "Disable Analytics"
-    message = "Your visits will *not* be logged."
+# [params.matomo]
+#     url = "https://matomo.invisible.ch"
+#     id = 1
+# 
+# [params.matomo.track]
+#     button = "Enable Analytics"
+#     message = "Your visits will be logged."
+# [params.matomo.block]
+#     button = "Disable Analytics"
+#     message = "Your visits will *not* be logged."
