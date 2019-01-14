@@ -1,3 +1,5 @@
+language: minimal
+
 matrix:
   include:
     - name: "Hugo Min Version"
@@ -18,12 +20,11 @@ install:
   - mkdir ~/_bin
   - |
     if [ $latest ]; then
-      export link=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "/hugo_[0-9]\.[0-9]*_Linux-64bit.tar.gz" | cut -d\" -f4)
+      link=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "/hugo_[0-9]\.[0-9]*_Linux-64bit.tar.gz" | cut -d\" -f4)
     else
-      export link="https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz"
+      link="https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz"
     fi
-  - echo $link
-  - wget $link -O hugo.tgz
+  - wget $(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "/hugo_[0-9]\.[0-9]*_Linux-64bit.tar.gz" | cut -d\" -f4) -O hugo.tgz
   - tar xfv hugo.tgz -C ~/_bin
   - rm hugo.tgz ~/_bin/*.md
   - export PATH=$HOME/_bin:$PATH
