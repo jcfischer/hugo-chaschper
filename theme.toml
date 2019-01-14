@@ -1,11 +1,11 @@
 name = "Chaschper"
 license = "MIT"
 licenselink = "https://github.com/jcfischer/hugo-chaschper/blob/master/LICENSE.md"
-description = "Based on Casper 2, simplified, IndieWeb"
+description = "Based on Casper 2, simplified, IndieWeb, Gallery"
 homepage = "https://github.com/jcfischer/hugo-chaschper"
 tags = ["blog","pages", "ghost theme", "indieweb", "gallery"]
 features = ["indieweb", "matomo"]
-min_version=0.31
+min_version=0.41
 
 [author]
   name = "Jens-Christian Fischer"
