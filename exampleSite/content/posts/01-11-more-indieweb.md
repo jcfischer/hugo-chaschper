@@ -11,7 +11,7 @@ slug:
 type: post
 ---
 
-I wrote about the [Intro to Indieweb](/2019/01/intro-to-indieweb/) yesterday. Reading up on it, starting to
+I wrote about the Intro to Indieweb yesterday. Reading up on it, starting to
 read the people behind it or using it, I feel a similar rush as I did back in the days when I started blogging.
 This is the evolution of the Web I remember, this feels right. (And it also feels like a tiny bubble in the 
 huge silo dominated web-simulacron we have around us today). Time to beat the drum, I guess and start on working

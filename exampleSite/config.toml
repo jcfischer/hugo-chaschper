@@ -11,7 +11,7 @@ canonifyurls    = true
     name    = "Jens-Christian Fischer"
     nick    = "jcfischer"
     email   = "jens-christian@invisible.ch"
-    avatar  = ""
+    avatar  = "/img/avatar.jpg"
     description = "Maker. Musician"
 
 [params]
