@@ -2,12 +2,12 @@
 
 <body class="tag-template">
 <div class="site-wrapper">
+
     {{ partial "header-sori-tag" . }}
 
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">
             <div class="post-feed">
-
                 {{ partial "post-list" . }}
             </div>
 
@@ -17,8 +17,7 @@
                 {{end}}
                 <span class="page-number"><span class="hide">Page {{ .Paginator.PageNumber }} of {{.Paginator.TotalPages}}</span>&nbsp;</span>
                 {{if .Paginator.HasNext}}
-                <a class="older-posts" href="{{ .Paginator.Next.URL }}"><span class="hide">Previous Posts</span>
-                    &rarr;</a>
+                <a class="older-posts" href="{{ .Paginator.Next.URL }}"><span class="hide">Previous Posts</span> &rarr;</a>
                 {{end}}
             </nav>
             <div class="post-mentions" id="post-mentions" style="display:none">
@@ -33,3 +32,4 @@
 </body>
 
 {{ end }}
+

@@ -414,7 +414,7 @@ body {
         padding-top: 0
     }
 
-    .home-template .site-nav {
+    .home-template .site-nav, .tag-template .site-nav {
         position: relative;
         top: -70px
     }
@@ -736,6 +736,12 @@ body {
     background-size: cover
 }
 
+@media(max-width: 500px) {
+    .post-card-image {
+        height: 80px;
+    }
+}
+
 .post-card-content-link {
     position: relative;
     display: block;
@@ -933,8 +939,8 @@ body {
     padding: 70px 100px 0;
     min-height: 230px;
     font-family: Georgia, serif;
-    font-size: 2.2rem;
-    line-height: 1.6em;
+    font-size: 1.8rem;
+    line-height: 1.5em;
     background: #fff
 }
 
@@ -947,6 +953,13 @@ body {
 @media (max-width: 800px) {
     .post-full-content {
         font-size: 1.9rem
+    }
+}
+
+
+@media (max-width: 500px) {
+    .post-full-content {
+        font-size: 1.7rem
     }
 }
 
@@ -1003,8 +1016,18 @@ body {
 }
 
 .post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em
+    padding-top: 0.5em;
+    font-size: 1.1em;
+    line-height: 1.4em
+}
+
+@media(max-width: 500px) {
+    .post-template .kg-card-markdown > p:first-child {
+        padding-top: 0.5em;
+        font-size: 1em;
+
+    }
+
 }
 
 .post-full-content a {
@@ -1913,6 +1936,19 @@ body {
 }
 
 @media (max-width: 500px) {
+
+    .site-header-content {
+        padding: 2px;
+        min-height: 70px;
+    }
+    .site-header-content h1 {
+        font-size: 2rem;
+    }
+    .site-header-content h2 {
+        font-size: 1.5rem;
+    }
+
+
     .site-header-content .author-bio {
         font-size: 1.8rem;
         line-height: 1.15em;

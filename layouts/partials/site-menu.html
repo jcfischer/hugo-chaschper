@@ -1,0 +1,9 @@
+<ul class="nav" role="menu">
+    {{ $currentNode := . }}
+    {{with .Site.Menus.main}}
+    {{ range sort . "Weight" "desc"}}
+    <li class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}nav-current{{end}}" role="menuitem">
+    <a href="{{.URL}}">{{.Name}}</a>
+    </li>
+    {{end}}{{end}}
+</ul>
