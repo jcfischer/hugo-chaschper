@@ -3,7 +3,8 @@
 <body class="tag-template">
 <div class="site-wrapper">
 
-    {{ partial "header-sori-tag" . }}
+    {{ .Scratch.Set "header-style" "tag" }}
+    {{ partial "header" . }}
 
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">

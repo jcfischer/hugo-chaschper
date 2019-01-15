@@ -2,7 +2,9 @@
 
 <body class="tag-template">
 <div class="site-wrapper">
-    {{ partial "header-sori-term" . }}
+
+    {{ .Scratch.Set "header-style" "term" }}
+    {{ partial "header" . }}
 
 
     <main id="site-main" class="site-main outer" role="main">

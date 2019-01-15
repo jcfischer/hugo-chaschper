@@ -1,17 +1,18 @@
 <header class="site-header outer " {{if .Site.Params.cover}}style="background-image: url({{.Site.Params.cover | absURL}})" {{end}}>
     <div class="inner">
+
+        {{ $style := (print "header-content-" (.Scratch.Get "header-style")) }}
+
         <div class="site-header-content">
-            <h1 class="site-title">{{ if .Site.Params.logo }}
-                <img class="site-logo" src="{{ .Site.Params.logo  | absURL}}" alt="{{ .Site.Params.title }}"/>
-                {{else}} {{ .Site.Params.title }} {{end}} </h1>
-            header
-            <h2 class="site-description">{{ .Site.Params.subtitle }} </h2>
+            {{ partial $style . }}
         </div>
 
         <nav class="site-nav">
             <div class="site-nav-left">
                 {{ partial "site-menu" . }}
             </div>
+
+
 
             {{ partial "site-nav-right" . }}
 

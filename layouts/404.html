@@ -2,12 +2,12 @@
 
 <body class="error-template">
 <div class="site-wrapper">
-    {{ partial "header-sori-error" . }}
+    {{ .Scratch.Set "header-style" "tag" }}
+    {{ partial "header" . }}
 
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">
 
-            {{if ne .Site.Params.singleViewStyle "casper"}}
             <div class="post-feed">
                 <article class="post-card post">
                     <a class="post-card-image-link" href="{{ .Permalink }}">
@@ -27,18 +27,11 @@
                     </div>
                 </article>
             </div>
-            {{else}}
-            <section class="error-message">
-                <h1 class="error-code">404</h1>
-                <p class="error-description">{{ .Site.Params.pageNotFoundTitle }}</p>
-                <a class="error-link" href="{{"/"|absURL}}">Go to the front page →</a>
-            </section>
-            {{end}}
+
 
         </div>
     </main>
 
-    {{if eq .Site.Params.singleViewStyle "casper"}}
     <aside class="outer">
         <div class="inner">
             <div class="post-feed">
@@ -46,7 +39,7 @@
             </div>
         </div>
     </aside>
-    {{end}}
+
 
     {{ partial "footer" . }}
 </div>

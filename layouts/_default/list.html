@@ -3,6 +3,7 @@
 <body class="home-template">
 <div class="site-wrapper">
 
+    {{ .Scratch.Set "header-style" "normal" }}
     {{ partial "header" . }}
 
     <main id="site-main" class="site-main outer" role="main">
