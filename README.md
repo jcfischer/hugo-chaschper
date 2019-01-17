@@ -53,6 +53,7 @@ languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
 canonifyurls    = true
+assetDir        = "static"
 
 
 [author]

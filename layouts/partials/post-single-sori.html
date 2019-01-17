@@ -32,8 +32,12 @@
         <h1 class="post-full-title p-name">{{.Title}}</h1>
     </header>
     {{if .Params.image}}
-        <figure class="post-card-image" style="background-image: url({{.Params.image | absURL}})">
+    {{ $img := resources.Get .Params.image }}
+    {{ with $img }}
+        <figure class="post-card-image" style="background-image: url({{ (.Fill "1200x600").Permalink }})">
         </figure>
+    {{ end }}
+
     {{else}}
         <figure class="post-card-image"
                 style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)">
