@@ -15,6 +15,9 @@ In addition, Chaschper features additional features:
 * [IndieAuth](https://indieauth.org) integration
 * [Webmention.io](https://webmention.io/) integration
 * Optional [Matomo](https://matomo.org) analytics (see installation instructions)
+* Image Galleries (see `content/galleries`)
+* Responsive images using the `{{< figure >}}` shortcut (this replaces the regular
+  Hugo figure shortcut)
 
 
 ## Theme Demo
