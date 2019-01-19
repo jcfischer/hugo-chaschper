@@ -16,7 +16,7 @@
         src="{{ (.Resize "1200x").RelPermalink }}" alt="{{$altText}}"/>
     </a>
     {{ with $caption }}
-    <figcaption><p>{{ . }}</p></figcaption>
+    <figcaption><h4>{{ . }}</h4></figcaption>
     {{ end }}
 </figure>
 {{ else }}
@@ -36,7 +36,7 @@
         src="{{ (.Resize "1200x").RelPermalink }}" alt="{{$altText}}"/>
     </a>
     {{ with $caption }}
-    <figcaption><p>{{ . }}</p></figcaption>
+    <figcaption><h4>{{ . }}</h4></figcaption>
     {{ end }}
 </figure>
 {{ end }}
