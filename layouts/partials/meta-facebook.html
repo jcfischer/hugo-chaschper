@@ -23,7 +23,11 @@
     {{ end }}
 {{ else }}
 {{if .Params.image }}
-    <meta property="og:image" content="{{ .Params.image | absURL}}"/>
+    {{ $img := resources.Get .Params.image }}
+    {{ with $img }}
+    <meta property="og:image" content="{{ (.Fill "1200x600").Permalink }}"/>
+    {{ end }}
+
 {{else}}{{if .Site.Params.cover}}
     <meta property="og:image" content="{{ .Site.Params.cover | absURL}}"/>
 {{end}}{{end}}
