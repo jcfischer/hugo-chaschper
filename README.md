@@ -85,6 +85,7 @@ assetDir        = "static"
 
   twitterName = "jcfischer"
   fbName = "JensChristianFischer"
+  mastodonName = "mastodon.green/@jcfischer"
   githubName = "jcfischer"
   linkedinName = "jenscfischer"
   keybaseName = "jcfischer"
