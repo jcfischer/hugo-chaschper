@@ -1,3 +1,6 @@
+{{ define "template" }}
+  {{ partial "show-template" (dict "Which" .Kind "Template" "layouts/partials/post-list-term.html") }}
+{{ end }}
 {{ $pages := ((where .Site.Pages "Type" "post") | shuffle) }}
 {{ range first 3 $pages}}
 

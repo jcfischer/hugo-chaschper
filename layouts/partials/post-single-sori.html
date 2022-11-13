@@ -1,3 +1,6 @@
+{{ define "template" }}
+  {{ partial "show-template" (dict "Which" .Kind "Template" "layouts/partials/post-single-sori.html") }}
+{{ end }}
 {{ $section := .Site.GetPage "section" .Section }}
 <article class="post-full post h-entry">
     <header class="post-full-header">
