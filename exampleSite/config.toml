@@ -2,7 +2,6 @@ baseurl         = "https://example.com"
 title           = "Chaschper - Hugo. HTML. Gallery. Art"
 theme           = [ "hugo-chaschper" ] # add "matomo" if you want matomo tracking
 languageCode    = "en-US"
-disqusShortname = ""
 paginate        = 6
 canonifyurls    = true
 assetDir        = "static"

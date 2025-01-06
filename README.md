@@ -53,13 +53,13 @@ baseurl         = "https://invisible.ch/"
 title           = "Invisible - Musings. Music. Code. Art"
 theme           = [ "chaschper", "matomo" ]
 languageCode    = "en-US"
-disqusShortname = ""
-paginate        = 6
 canonifyurls    = true
 assetDir        = "static"
 
+[pagination]
+    pagerSize = 6
 
-[author]
+[params.author]
     name    = "Jens-Christian Fischer"
     nick    = "jcfischer"
     email   = "jens-christian@invisible.ch"
