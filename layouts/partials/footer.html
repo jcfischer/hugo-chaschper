@@ -7,12 +7,12 @@
                    rel="me">
                     {{ .Site.Author.name }}
                 </a> /
-                <a class="u-email email metatag" rel="me" href="mailto:{{ .Site.Author.email }}">
+                <a class="u-email email metatag" rel="me" href="mailto:{{ .Site.Params.Author.email }}">
                     Email Me
                 </a>
             </p>
             <p>
-                <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" alt="Avatar"/>
+                <img class="u-photo avatar" src="{{ .Site.Params.Author.avatar }}" alt="Avatar"/>
             </p>
             <p>
                 <span class="p-locality">{{ .Site.Params.IndieWeb.City }}</span>,
