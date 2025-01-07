@@ -57,8 +57,8 @@
                 <footer class="post-full-footer">
                     <section class="author-card">
                         <section class="author-card-content">
-                            <span class="author-card-name p-author">{{.Params.author | default .Site.Author.name}}</span>
-                            <p>{{.Params.authorDescription | default .Site.Author.description}}</p>
+                            <span class="author-card-name p-author">{{.Params.author | default .Site.Params.Author.name}}</span>
+                            <p>{{.Params.authorDescription | default .Site.Params.Author.description}}</p>
                         </section>
                     </section>
                 </footer>
