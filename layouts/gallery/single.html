@@ -8,7 +8,7 @@
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">
 
-            {{ $section := .Site.GetPage "section" .Section }}
+            {{ $section := .CurrentSection }}
             <article class="post-full post h-entry">
                 <header class="post-full-header">
                     <section class="post-full-meta">

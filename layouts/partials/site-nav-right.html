@@ -4,7 +4,11 @@
     {{ if .Site.Params.RSSLink }}
     <a class="subscribe-button" href="{{.Site.Params.RSSLink }}">Subscribe</a>
     {{else if .Site.Params.showSubscribe }}
-    <a class="subscribe-button" href="{{if .IsNode }}{{ .RSSLink }}{{ else }}{{ "index.xml" | absURL }}{{end}}">Subscribe</a>
+    {{- with .OutputFormats.Get "RSS" }}
+    <a class="subscribe-button" href="{{ .Permalink }}">Subscribe</a>
+    {{- else }}
+    <a class="subscribe-button" href="{{ "index.xml" | absURL }}">Subscribe</a>
+    {{- end }}
     {{end}}
     {{ partial "search" . }}
 </div>
